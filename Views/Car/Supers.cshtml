@@ -4,7 +4,7 @@
 }
 <div class="masthead" style="background-color:#232323">
     <div class="container-fluid" style="margin-top:9em;">
-        
+
         <div class="row mt-2">
             <div class="col-sm ">
                 <div class="dropdown mt-5">
@@ -12,8 +12,8 @@
                         Catégories
                     </button>
                     <div class="dropdown-menu categorie" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item categorie-item active" asp-area="" asp-controller="Car" asp-action="Index">Tous</a>
-                        <a class="dropdown-item categorie-item"  asp-area="" asp-controller="Car" asp-action="Supers">Supers</a>
+                        <a class="dropdown-item categorie-item" href="#">Tous</a>
+                        <a class="dropdown-item categorie-item active" href="#">Supers</a>
                         <a class="dropdown-item categorie-item" href="#">Sports</a>
                         <a class="dropdown-item categorie-item" href="#">Sports Classics</a>
                         <a class="dropdown-item categorie-item" href="#">Sedans</a>
@@ -47,7 +47,7 @@
     </div>
 
     <div class="container-fluid">
-        <div class="headline">VOITURES NON-IMPORTÉES</div>
+        <div class="headline">VOITURES SUPERS SPORTIVES</div>
         <div class="row">
             @foreach (var car in Model.cars)
             {

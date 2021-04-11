@@ -28,7 +28,7 @@ namespace EvoWebsite.Data.Configurations
                 new Car() { CarId = 10, ImgPath = "/img/Super/Voltic.png", Name = "Voltic", Price = 0, MSRP = 0, Type = "Super" },
                 new Car() { CarId = 11, ImgPath = "/img/Super/Zentorno.png", Name = "Voltic", Price = 0, MSRP = 0, Type = "Super" },
 
-
+                //Sport
                 new Car() { CarId = 12, ImgPath = "/img/Sport/9F.png", Name = "9F", Price = 0, MSRP = 0, Type = "Sport" },
                 new Car() { CarId = 13, ImgPath = "/img/Sport/9FCabrio.png", Name = "9FCabrio", Price = 0, MSRP = 0, Type = "Sport" },
                 new Car() { CarId = 14, ImgPath = "/img/Sport/Alpha.png", Name = "Alpha", Price = 0, MSRP = 0, Type = "Sport" },
@@ -67,8 +67,30 @@ namespace EvoWebsite.Data.Configurations
                 new Car() { CarId = 45, ImgPath = "/img/SportClassics/Stinger.png", Name = "Stinger", Price = 0, MSRP = 0, Type = "SportClassics" },
                 new Car() { CarId = 46, ImgPath = "/img/SportClassics/StirlingGT.png", Name = "StirlingGT", Price = 0, MSRP = 0, Type = "SportClassics" },
                 new Car() { CarId = 47, ImgPath = "/img/SportClassics/Tornado.png", Name = "Tornado", Price = 0, MSRP = 0, Type = "SportClassics" },
-                new Car() { CarId = 48, ImgPath = "/img/SportClassics/Z-Type.png", Name = "Z-Type", Price = 0, MSRP = 0, Type = "SportClassics" }
-            );
+                new Car() { CarId = 48, ImgPath = "/img/SportClassics/Z-Type.png", Name = "Z-Type", Price = 0, MSRP = 0, Type = "SportClassics" },
+
+                //Sedans
+                new Car() { CarId = 49, ImgPath = "/img/Sedans/Asea.png", Name = "Asea", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 50, ImgPath = "/img/Sedans/Asterope.png", Name = "Asterope", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 51, ImgPath = "/img/Sedans/Emperor.png", Name = "Emperor", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 52, ImgPath = "/img/Sedans/Fugitive.png", Name = "Fugitive", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 53, ImgPath = "/img/Sedans/Glendale.png", Name = "Glendale", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 54, ImgPath = "/img/Sedans/Ingot.png", Name = "Ingot", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 55, ImgPath = "/img/Sedans/Intruder.png", Name = "Intruder", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 56, ImgPath = "/img/Sedans/Premier.png", Name = "Premier ", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 57, ImgPath = "/img/Sedans/Primo.png", Name = "Primo", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 58, ImgPath = "/img/Sedans/Regina.png", Name = "Premier", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 59, ImgPath = "/img/Sedans/RomeroHearse.png", Name = "RomeroHearse", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 60, ImgPath = "/img/Sedans/Schafter.png", Name = "Schafter", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 61, ImgPath = "/img/Sedans/Stanier.png", Name = "Stanier", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 62, ImgPath = "/img/Sedans/Stratum.png", Name = "Stratum", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 63, ImgPath = "/img/Sedans/Stretch.png", Name = "Stretch", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 64, ImgPath = "/img/Sedans/SuperDiamond.png", Name = "SuperDiamond", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 65, ImgPath = "/img/Sedans/Surge.png", Name = "Surge", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 66, ImgPath = "/img/Sedans/Tailgater.png", Name = "Tailgater", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 67, ImgPath = "/img/Sedans/Warrener.png", Name = "Warrener", Price = 0, MSRP = 0, Type = "Sedans" },
+                new Car() { CarId = 68, ImgPath = "/img/Sedans/Washington.png", Name = "Washington", Price = 0, MSRP = 0, Type = "Sedans" }
+                );
         }
 
     }

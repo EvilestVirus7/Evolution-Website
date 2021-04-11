@@ -24,5 +24,12 @@ namespace EvoWebsite.Controllers
             CarListVM model = new CarListVM() { cars = cars };
             return View(model);
         }
+
+        public IActionResult Supers()
+        {
+            List<Car> supers = db.Cars.Where(e => e.Type == "Super").ToList();
+            CarListVM model = new CarListVM() { cars = supers };
+            return View(model);
+        }
     }
 }

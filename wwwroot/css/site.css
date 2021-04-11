@@ -127,15 +127,17 @@ body {
 
 .btn-chercher {
     margin-top: 8px;
-    background-color: #392A49;
+    background-color: #3b1a53;
+    border: 4px solid #2f3136;
     color: #B8BABD;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 .input-chercher {
     background-color: #B8BABD;
-    border: 2px solid  #392A49;
-    margin:auto;
-    
+    border: 2px solid #3b1a53;
+    margin: auto;
 }
 
 .main-page {
@@ -169,3 +171,22 @@ body {
         background-color: #3b1a53;
         border:2px solid #B8BABD;
     }
+
+.btn-categorie {
+    background-color: #3b1a53;
+    border: 4px solid #2f3136;
+    font-size: 30px;
+    color: #B8BABD;
+    border-radius: 10px;
+}
+
+.categorie {
+    background-color: #333333;
+    width: 40%;
+}
+
+.categorie-item {
+    color: #B8BABD;
+    font-family: 'Monda', sans-serif;
+    font-size: 20px;
+}
