@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EvoWebsite</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700">
+    <link rel="stylesheet" href="/fonts/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/site.css?version=4" />
+</head>
+
+<body>
+    <div class="container fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark rounded">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">
+                <img class="rounded" src="/img/logoEvo2.png" height="40px">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                </div>
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-link nav-item rounded nav-button" asp-area="" asp-controller="Home" asp-action="Index">ACCEUIL</a>
+                    <a class="nav-link nav-item rounded nav-button" asp-area="" asp-controller="Car" asp-action="Index">CATALOGUE</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+        <!--<nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg w-50 m-auto fixed-top" id="mainNav" style="background-color: #36393F; border-radius: 0px 0px 20px 20px;">
+            <div class="container">
+                <img class="rounded shadow" src="/img/logo.png">
+
+               
+                <div class="navbar-collapse collapse" id="navbarResponsive">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item nav-link js-scroll-trigger">
+                            <a class="nav-link js-scroll-trigger rounded" style="background: #3b1a53;margin: 0px;padding: 15px;" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item nav-link js-scroll-trigger">
+                            <a class="nav-link js-scroll-trigger rounded" style="background: #3b1a53;margin: 0px;padding: 15px;" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>-->
+    
+    
+            
+                @RenderBody()
+        
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
