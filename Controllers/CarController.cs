@@ -31,5 +31,28 @@ namespace EvoWebsite.Controllers
             CarListVM model = new CarListVM() { cars = supers };
             return View(model);
         }
+
+        public IActionResult Sports()
+        {
+            List<Car> sports = db.Cars.Where(e => e.Type == "Sport").ToList();
+            CarListVM model = new CarListVM() { cars = sports };
+            return View(model);
+        }
+
+        public IActionResult SportsClassics()
+        {
+            List<Car> sportclassics = db.Cars.Where(e => e.Type == "SportClassics").ToList();
+            CarListVM model = new CarListVM() { cars = sportclassics };
+            return View(model);
+        }
+
+        public IActionResult Sedans()
+        {
+            List<Car> sedans = db.Cars.Where(e => e.Type == "Sedans").ToList();
+            CarListVM model = new CarListVM() { cars = sedans };
+            return View(model);
+        }
+
+        
     }
 }
