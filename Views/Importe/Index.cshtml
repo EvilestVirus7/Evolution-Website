@@ -1,5 +1,60 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model EvoWebsite.ViewsModels.CarListVM;
 @{
+    int counter = 0;
 }
+<div class="masthead" style="background-color:#232323">
+    <div class="container-fluid" style="margin-top:9em;">
+
+        <div class="row mt-2">
+            <div class="col-sm ">
+                
+            </div>
+            <div class="col-sm">
+                <div class="card p-2 m-2 vehicule-card">
+
+                    <div class="card-body" style="height:7em;">
+                        <div class="">
+                            <input class="input-chercher form-control" />
+                        </div>
+                        <div class="">
+                            <button class="btn btn-chercher">Chercher</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="headline">VOITURES IMPORTÉES</div>
+        <div class="row">
+            @foreach (var car in Model.cars)
+            {
+                if (counter != 0 && counter % 4 == 0)
+                {
+                @:</div>
+                @:<div class="row">
+                }
+
+                <div class="col-sm">
+                    <div class="card p-3 m-2 box-shadow vehicule-card">
+                        <img class="card-img-top vehicule-image" src="@car.ImgPath" alt="Card image cap">
+                        <div class="card-body vehicule-cardbody">
+                            <h2 class="vehicule-name">@car.Name</h2>
+                        </div>
+                    </div>
+                </div>
+
+                counter++;
+            }
+        </div>
+
+
+
+
+    </div>
+</div>

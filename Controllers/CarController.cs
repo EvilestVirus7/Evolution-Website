@@ -53,6 +53,32 @@ namespace EvoWebsite.Controllers
             return View(model);
         }
 
-        
+        public IActionResult SUVs()
+        {
+            List<Car> suvs = db.Cars.Where(e => e.Type == "SUV").ToList();
+            CarListVM model = new CarListVM() { cars = suvs };
+            return View(model);
+        }
+
+        public IActionResult Muscles()
+        {
+            List<Car> muscles = db.Cars.Where(e => e.Type == "Muscle").ToList();
+            CarListVM model = new CarListVM() { cars = muscles };
+            return View(model);
+        }
+
+        public IActionResult Coupes()
+        {
+            List<Car> coupes = db.Cars.Where(e => e.Type == "Coupe").ToList();
+            CarListVM model = new CarListVM() { cars = coupes };
+            return View(model);
+        }
+
+        public IActionResult Compacts()
+        {
+            List<Car> compacts = db.Cars.Where(e => e.Type == "Compact").ToList();
+            CarListVM model = new CarListVM() { cars = compacts };
+            return View(model);
+        }
     }
 }
