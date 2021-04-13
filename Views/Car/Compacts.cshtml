@@ -1,6 +1,7 @@
 ﻿@model EvoWebsite.ViewsModels.CarListVM;
 @{
     int counter = 0;
+    double countCar = Model.cars.Count;
 }
 <div class="masthead" style="background-color:#232323">
     <div class="container-fluid" style="margin-top:9em;">
@@ -52,25 +53,23 @@
         <div class="row">
             @foreach (var car in Model.cars)
             {
-                if (counter != 0 && counter % 4 == 0)
-                {
-                @:</div>
-                @:<div class="row">
-                }
-                
-                else
-                {
-                    <div class="col-sm">
-                        <div class="card p-3 m-2 box-shadow vehicule-card">
-                            <img class="card-img-top vehicule-image" src="@car.ImgPath" alt="Card image cap">
-                            <div class="card-body vehicule-cardbody">
-                                <h2 class="vehicule-name">@car.Name</h2>
-                            </div>
+
+               
+                <div class="col-md-4 col-lg-3">
+                    <div class="card p-3 m-2 box-shadow vehicule-card">
+                        <img class="card-img-top vehicule-image" src="@car.ImgPath" alt="Card image cap">
+                        <div class="card-body vehicule-cardbody">
+                            <h2 class="vehicule-name">@car.Name</h2>
                         </div>
                     </div>
-                }
+                </div>
+
                 counter++;
             }
+
+
+
+            
         </div>
 
 

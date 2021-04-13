@@ -95,6 +95,8 @@ body {
     padding: 3px;
     border-radius: 10px;
     border: solid 4px #2F3136;
+    font-size: 1em;
+    text-align: center;
 }
 
 .vehicule-image {

@@ -48,17 +48,13 @@
     </div>
 
     <div class="container-fluid">
-        <div class="headline">VOITURES SUPERS SPORTIVES</div>
+        <div class="headline">VOITURES MUSCLES</div>
         <div class="row">
             @foreach (var car in Model.cars)
             {
-                if (counter != 0 && counter % 4 == 0)
-                {
-                @:</div>
-                @:<div class="row">
-                }
 
-                <div class="col-sm">
+
+                <div class="col-md-4 col-lg-3">
                     <div class="card p-3 m-2 box-shadow vehicule-card">
                         <img class="card-img-top vehicule-image" src="@car.ImgPath" alt="Card image cap">
                         <div class="card-body vehicule-cardbody">
@@ -69,7 +65,12 @@
 
                 counter++;
             }
+
+
+
+
         </div>
+
 
 
 
