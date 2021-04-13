@@ -21,5 +21,6 @@ namespace EvoWebsite.Data
 
         public DbSet<Car> Cars { get; set; }
         public DbSet<Importe> Importes { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
