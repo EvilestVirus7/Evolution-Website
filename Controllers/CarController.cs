@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace EvoWebsite.Controllers
@@ -18,9 +19,36 @@ namespace EvoWebsite.Controllers
             db = context;
         }
 
-        public IActionResult Index()
+        [Route("[controller]")]
+        [Route("[controller]/index")]
+        [Route("[controller]/index/{*search}")]
+        [Route("[controller]/index/{search?}")]
+        public IActionResult Index(string search)
         {
+            
             List<Car> cars = db.Cars.ToList();
+            List<Car> searchCars = new List<Car>();
+            if (search != null)
+            {
+                foreach(Car c in cars)
+                {
+                    var input = c.Name;
+                    var output1 = Regex.Replace(input.Split()[0], @"[^0-9a-zA-Z\ ]+", "");
+
+                    if (c.Name.ToLower().Trim() == search.ToLower().Trim())
+                    {
+                        searchCars.Add(c);
+                    }else if(output1.Trim().ToLower() == search.ToLower().Trim())
+                    {
+                        searchCars.Add(c);
+                    }
+
+                }
+
+                    CarListVM model2 = new CarListVM() { cars = searchCars };
+                    return View(model2);
+
+            }
             CarListVM model = new CarListVM() { cars = cars };
             return View(model);
         }

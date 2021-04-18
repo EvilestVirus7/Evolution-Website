@@ -1,5 +1,62 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model EvoWebsite.ViewsModels.OrderListVM;
+<div class="bg-list">
+    <div class="container h-100 list-orders-overlay">
+
+        <div class="row">
+            <div class="col-lg">
+
+            </div>
+            <div class="col-lg list-col">
+                <button class="btn-card" onclick="window.location='/order/index'">Commandes</button>
+                <button class="btn-card" onclick="window.location='/carlist/index'">Voitures</button>
+            </div>
+            <div class="col-lg">
+
+            </div>
+        </div>
+
+        <div class="form-title">LISTE DES COMMANDES</div>
+        <table class="table table-striped">
+            <tbody>
+
+                <tr class="title-orders">
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Téléphone</th>
+                    <th scope="col">Voiture</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+
+                @foreach (Order order in Model.Orders)
+                {
+                    <tr class="content-orders">
+                        <th scope="row">@order.OrderId</th>
+                        <td>@order.Date</td>
+                        <td>@order.ClientName</td>
+                        <td>@order.Telephone</td>
+                        <td>@order.CarName</td>
+                        <td><input type="image" src="/img/btn-modif.png" class="btn-modif" onclick="window.location='/commande/modif/@order.OrderId'" /></td>
+                        <td><input type="image" src="/img/btn-remove.png" class="btn-modif " onclick="remove(@order.OrderId)" /></td>
+                    </tr>
+
+                }
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    function remove(id) {
+        var agreed = confirm("Êtes-vous sûre de vouloir supprimer cette commande?");
+        if (agreed)
+        {
+            window.location = '/commande/supprime/' + id;
+        }
+    }
+</script>

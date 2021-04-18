@@ -1,0 +1,59 @@
+﻿@model EvoWebsite.ViewsModels.CarListVM;
+
+<div class="bg-list2">
+    <div class="container h-100 list-orders-overlay">
+
+        <div class="row">
+            <div class="col-lg">
+
+            </div>
+            <div class="col-lg list-col">
+                <button class="btn-card" onclick="window.location='/order/index'">Commandes</button>
+                <button class="btn-card" onclick="window.location='/carlist/index'">Voitures</button>
+            </div>
+            <div class="col-lg">
+
+            </div>
+        </div>
+
+        <div class="form-title">LISTE DES VOITURES</div>
+        <table class="table table-striped">
+            <tbody>
+
+                <tr class="title-orders">
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">MSRP</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+
+                @foreach (Car car in Model.cars)
+                {
+                    <tr class="content-orders">
+                        <th scope="row">@car.CarId</th>
+                        <td>@car.Name</td>
+                        <td>@car.Price$</td>
+                        <td>@car.MSRP$</td>
+                        <td><input type="image" src="/img/btn-modif.png" class="btn-modif" onclick="window.location='/voiture/modif/@car.CarId'" /></td>
+                        <td><input type="image" src="/img/btn-remove.png" class="btn-modif " onclick="remove(@car.CarId)" /></td>
+                    </tr>
+
+                }
+
+
+
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    function remove(id) {
+        var agreed = confirm("Êtes-vous sûre de vouloir supprimer cette voiture?");
+        if (agreed) {
+            window.location = '/voiture/supprime/' + id;
+        }
+    }
+</script>

@@ -32,10 +32,10 @@
 
                     <div class="card-body" style="height:7em;">
                         <div class="">
-                            <input class="input-chercher form-control" />
+                            <input class="input-chercher form-control" id="search" />
                         </div>
                         <div class="">
-                            <button class="btn btn-chercher">Chercher</button>
+                            <button class="btn btn-chercher" onclick="goto()">Chercher</button>
                         </div>
                     </div>
                 </div>
@@ -49,9 +49,12 @@
 
     <div class="container-fluid">
         <div class="headline">VOITURES SPORTIVES</div>
-        <div class="row">
-            @foreach (var car in Model.cars)
-            {
+        @if (Model.cars.Count != 0)
+        {
+            <div class="row">
+
+                @foreach (var car in Model.cars)
+                {
 
 
                 <div class="col-md-4 col-lg-3">
@@ -59,20 +62,36 @@
                         <img class="card-img-top vehicule-image" src="@car.ImgPath" alt="Card image cap">
                         <div class="card-body vehicule-cardbody">
                             <h2 class="vehicule-name">@car.Name</h2>
+                            <button class="btn-card" onclick="window.location = '/commande/@car.Name'">@car.MSRP $</button>
                         </div>
                     </div>
                 </div>
 
-                counter++;
-            }
+                    counter++;
+                }
 
 
 
 
-        </div>
+            </div>
 
-
+        }
+        else
+        {
+            <h2 class="no-car-text">Il n'y a pas de voitures disponible</h2>
+        }
 
 
     </div>
 </div>
+<script>
+
+    function goto() {
+        let search = document.getElementById("search").value;
+        if (search != ""){
+            window.location.href = "index?search=" + search
+        }
+    }
+
+
+</script>

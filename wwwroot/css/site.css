@@ -84,7 +84,7 @@ body {
 }
 
 .vehicule-cardbody {
-    height: 5em;
+    height: auto;
 }
 
 .vehicule-name {
@@ -115,17 +115,7 @@ body {
     position: relative;
 }
 
-    .headline:after {
-        content: ' ';
-        position: absolute;
-        top: 90%;
-        left: 50%;
-        width: 100px;
-        border: 2px solid #3b1a53;
-        border-radius: 4px;
-        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-        transform: translateX(-50%);
-    }
+
 
 .btn-chercher {
     margin-top: 8px;
@@ -165,7 +155,7 @@ body {
     font-family: 'Monda', sans-serif;
     padding: 16px;
     margin-left: 1em;
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -177,14 +167,14 @@ body {
 .btn-categorie {
     background-color: #3b1a53;
     border: 4px solid #2f3136;
-    font-size: 30px;
+    font-size: large;
     color: #B8BABD;
     border-radius: 10px;
 }
 
 .categorie {
     background-color: #333333;
-    width: 40%;
+    font-size: x-large;
 }
 
 .categorie-item {
@@ -211,7 +201,7 @@ body {
 }
 
 .form-title {
-    padding-top: 2em;
+    padding-top: 0.25em;
     font-family: 'Monda', sans-serif;
     line-height: 1.5em;
     color: #B8BABD;
@@ -222,4 +212,87 @@ body {
 
 .form-input-title {
     font-family: 'Monda', sans-serif;
+}
+
+.bg-list {
+    background-image: url('/img/bg-list.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+.list-orders-overlay {
+    background-color: rgba(20,20,20,0.5);
+}
+
+.title-orders {
+    background-color: #2f3136 !important;
+    color: #B8BABD;
+    border: 2px solid #3b1a53;
+    font-family: 'Monda', sans-serif;
+    
+}
+
+.content-orders {
+    background-color: #3d3d3d !important;
+    color: #B8BABD;
+    border: 2px solid #2f3136;
+    font-family: 'Monda', sans-serif;
+    font-size: 13px;
+}
+
+.btn-modif {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    display: block;
+    height: 25px;
+    width: 25px;
+
+}
+
+.btn-card {
+    background-color: #3b1a53;
+    border: 2px solid #2f3136;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Monda', sans-serif;
+    color: #B8BABD;
+}
+
+.no-car-text {
+    margin: auto;
+    text-align: center;
+    margin-top: 4em;
+    color: #f1423d;
+}
+
+.list-col{
+    margin-top: 10%;
+    text-align:center;
+    justify-content:center;
+}
+@media only screen and (max-width: 1000px) {
+    .list-col {
+        margin-top: 15%;
+
+    }
+}
+
+.bg-list2 {
+    background-color: #392A49;
+}
+
+.form-control {
+    font-family: 'Monda', sans-serif;
+}
+
+.form-control::selection {
+    background-color: #3b1a53;
+    color: #B8BABD;
+    border-radius: 10px;
 }

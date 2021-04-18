@@ -1,0 +1,40 @@
+﻿
+@model EvoWebsite.ViewsModels.EditCarVM;
+<div class="bg-form">
+    <div class="container h-100 form-overlay">
+        <div class="form-title">MODIFICATION D'UNE VOITURE</div>
+        @using (Html.BeginForm("EditCarFinal", "Carlist", FormMethod.Post))
+        {
+            <div class="form-main">
+                <div class="form-group">
+                    <label for="name" class="form-input-title">ID</label>
+                    @Html.TextBoxFor(m => m.CarId, "", new { @type = "text", @class = "form-control" })
+                </div>
+                <div class="form-group">
+                    <label for="name" class="form-input-title">Nom</label>
+                    @Html.TextBoxFor(m => m.Name, "", new { @type = "text", @class = "form-control", @required = "" })
+
+                </div>
+                <div class="form-group">
+                    <label for="telephone" class="form-input-title">Image Path</label>
+                    @Html.TextBoxFor(m => m.ImgPath, "", new { @type = "text", @class = "form-control", @required = "" })
+
+                </div>
+                <div class="form-group">
+                    <label for="car" class="form-input-title">Prix</label>
+                    @Html.TextBoxFor(m => m.Price, "", new { @type = "text", @class = "form-control", @required = "" })
+
+
+                </div>
+                <div class="form-group">
+                    <label for="car" class="form-input-title">MSRP</label>
+                    @Html.TextBoxFor(m => m.MSRP, "", new { @type = "text", @class = "form-control", @required = "" })
+
+
+                </div>
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-primary">Modifier</button>
+            </div>
+        }
+    </div>
+</div>

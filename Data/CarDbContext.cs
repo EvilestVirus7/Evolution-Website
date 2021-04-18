@@ -15,12 +15,13 @@ namespace EvoWebsite.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new CarConfiguration());
+            //modelBuilder.ApplyConfiguration(new CarConfiguration());
 
         }
 
         public DbSet<Car> Cars { get; set; }
         public DbSet<Importe> Importes { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Vehicles> Vehicles { get; set; }
     }
 }
